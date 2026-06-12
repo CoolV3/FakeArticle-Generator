@@ -1,11 +1,11 @@
-import GuidesPageComponent from "@/components/guidesPageComponent";
+import GuidesOverview from "@/components/guidesOverview";
 
 
 export default function GuidesPage() {
 
     return(
         <div>
-            <GuidesPageComponent/>
+            <GuidesOverview/>
         </div>
     )
 }
