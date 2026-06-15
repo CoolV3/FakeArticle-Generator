@@ -1,6 +1,7 @@
 import GuidesOverview from "@/components/guidesOverview";
 import prisma from "@/lib/prisma";
 import {notFound} from "next/navigation";
+import EmptyArticle from "@/components/Article";
 
 export default async function ArticlePage({params}: {params: Promise<{ articleId: string}>}) {
     const {articleId} = await params
@@ -21,7 +22,7 @@ export default async function ArticlePage({params}: {params: Promise<{ articleId
 
     return(
         <div>
-            <GuidesOverview/>
+            <EmptyArticle markdown={currentArticle.markdownContent} title={currentArticle.title} author={currentArticle.author} imageUrl={currentArticle.headerImageUrl}/>
         </div>
     )
 }

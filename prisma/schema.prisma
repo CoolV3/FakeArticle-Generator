@@ -20,4 +20,5 @@ model Article {
   author          String
   createdAt       DateTime @default(now())
   deletesAt       DateTime
+  ipAdress        String
 }
