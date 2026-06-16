@@ -4,7 +4,8 @@ import EmptyArticle from "@/components/Article";
 import {useState} from "react";
 import MarkdownInput from "@/components/MarkdownInput";
 import publishArticleAction from "@/app/actions/publishArticleAction";
-import Markdown from "react-markdown";
+import { TriangleAlert } from 'lucide-react';
+import Link from "next/link";
 
 type PublishedArticle = {
     title: string,
@@ -28,27 +29,32 @@ export default function GenerateNewArticleComponent() {
     const [author, setAuthor] = useState("Max Mustermann")
     const [image, setImage] = useState("")
     const [error, setError] = useState("")
+    const [showPublishWarning, setShowPublishWarning] = useState(false)
 
 
     const publishArticle = async () => {
         setError("")
-
+        setShowPublishWarning(false)
         if (!MarkdownArticle.trim() || !title.trim() || !author.trim() || !image.trim()) {
             setError("Not all fields are filled out.")
             return
         }
 
         if (title.length > 50) {
-            return {success:false, message: "Title is too long"}
+            setError("Title is too long")
+            return
         }
         if (author.length > 50) {
-            return {success: false, message: "Author name is too long"}
+            setError("Author name is too long")
+            return
         }
         if (MarkdownArticle.length > 2000) {
-            return {success: false, message: "Article is too long."}
+            setError("Article is too long.")
+            return
         }
         if (!checkValidUrl(image)) {
-            return {succsess: false, message: "Image url is not valid"}
+            setError("Image url is not valid")
+            return
         }
 
         const article: PublishedArticle = {
@@ -61,44 +67,81 @@ export default function GenerateNewArticleComponent() {
         const response = await publishArticleAction(article)
 
         if (response.success) {
-            console.log("Worked")
+            return (
+                <div>
+                    <h1>hh</h1>
+                </div>
+            )
         } else (
             setError(response.message)
         )
     }
 
     return(
-        <div className="flex flex-col justify-center items-center pb-10">
-            <div className="flex flex-col md:flex-row gap-20 justify-center items-center ">
-                <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-5xl">Generate an new Article</h1>
-                    <p>Generate an real looking news article.</p>
-                    <div className="p-10 flex-col flex gap-5">
-                        <div>
-                            <p>Article Name</p>
-                            <input placeholder="Article Name" className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setTitle(e.target.value)}/>
+        <div className="flex items-center justify-center">
+            <div className="flex flex-col justify-center items-center pb-10 relative">
+                <div className="flex flex-col md:flex-row md:gap-20 justify-center items-start">
+                    <div className="flex flex-col justify-center items-center">
+                        <h1 className="text-5xl">Generate an new Article</h1>
+                        <p>Generate an real looking news article.</p>
+                        <div className="p-10 flex-col flex gap-5">
+                            <div>
+                                <p>Article Name</p>
+                                <input placeholder="Article Name" className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setTitle(e.target.value)}/>
+                            </div>
+                            <MarkdownInput onChange={(e) => setMarkdownArticle(e)}/>
+                            <div>
+                                <p>Author Name</p>
+                                <input type="text" placeholder="Max Mustermann" className="border-2 rounded-2xl p-4 text-lg w-100 " onChange={(e) => setAuthor(e.target.value)}/>
+                            </div>
+                            <div>
+                                <p>Title Image url</p>
+                                <input type="url" placeholder="https://..." className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setImage(e.target.value)}/>
+                            </div>
                         </div>
-                        <MarkdownInput onChange={(e) => setMarkdownArticle(e)}/>
-                        <div>
-                            <p>Author Name</p>
-                            <input type="url" placeholder="Max Mustermann" className="border-2 rounded-2xl p-4 text-lg w-100 " onChange={(e) => setAuthor(e.target.value)}/>
+                    </div>
+                    <div className="h-auto overflow-y-auto justify-start ">
+                        <EmptyArticle markdown={MarkdownArticle} title={title} author={author} imageUrl={image}/>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center">
+                    <button onClick={(e) => setShowPublishWarning(true)} className="bg-yellow-400 px-10 py-5 rounded-2xl text-3xl cursor-pointer hover:bg-yellow-300 transition-colors duration-700">Publish Article</button>
+                    {error && (
+                        <p className="text-red-600">{error}</p>
+                    )}
+                </div>
+            </div>
+
+            {showPublishWarning && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={(e) => setShowPublishWarning(false)}>
+                    <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-100 h-220 bg-blue-100 pt-5" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex items-center justify-center flex-col">
+                            <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25">
+                                <TriangleAlert className="text-red-600 w-20 h-20"/>
+                            </div>
+                            <h1 className="text-black text-lg text-center p-5">By publishing this article, you confirm that you have read and accepted the information below.</h1>
+                            <div className="p-3 flex flex-col gap-5">
+                                <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
+                                    <h1 className="text-lg">The Article will be online and stored in the Database for 3 days</h1>
+                                </div>
+                                <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
+                                    <h1 className="text-lg">You have permission to use the images in the article including the header image</h1>
+                                </div>
+                                <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
+                                    <h1 className="text-lg">The article may not contain any illegal content or copyrighted content</h1>
+                                </div>
+                                <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
+                                    <h1 className="text-lg">You have read and accepted out <Link className="text-blue-900" href={"/privacy"}>Privacy Policy</Link></h1>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p>Title Image url</p>
-                            <input type="url" placeholder="https://..." className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setImage(e.target.value)}/>
+                        <div className="pb-3">
+                            <button onClick={(e) => publishArticle()} className="bg-yellow-400 px-10 py-5 rounded-2xl text-3xl cursor-pointer hover:bg-yellow-300 transition-colors duration-700">Publish Article</button>
                         </div>
                     </div>
                 </div>
-                <div className="h-screen overflow-y-auto">
-                    <EmptyArticle markdown={MarkdownArticle} title={title} author={author} imageUrl={image}/>
-                </div>
-            </div>
-            <div className="flex flex-col items-center">
-                <button onClick={(e) => publishArticle()} className="bg-yellow-400 px-10 py-5 rounded-2xl text-3xl cursor-pointer hover:bg-yellow-300 transition-colors duration-700">Publish Article</button>
-                {error && (
-                    <p className="text-red-600">{error}</p>
-                )}
-            </div>
+            )}
         </div>
+
     )
 }
