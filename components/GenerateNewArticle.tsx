@@ -100,7 +100,7 @@ export default function GenerateNewArticleComponent() {
                             </div>
                         </div>
                     </div>
-                    <div className="h-auto overflow-y-auto justify-start ">
+                    <div className="h-screen overflow-y-auto justify-start ">
                         <EmptyArticle markdown={MarkdownArticle} title={title} author={author} imageUrl={image}/>
                     </div>
                 </div>
