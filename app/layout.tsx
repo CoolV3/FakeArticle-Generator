@@ -5,6 +5,7 @@ import "./globals.css";
 import NavbarComponent from "@/components/navbar";
 import ArticlePath from "@/components/ArticlePath";
 import {usePathname} from "next/navigation";
+import FooterComponent from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +37,12 @@ export default function RootLayout({
         <NavbarComponent/>
         <ArticlePath Paths={Path}/>
       </div>
-      <div>
+      <div className="grow">
       {children}
       </div>
+
+        <FooterComponent/>
+
       </body>
     </html>
   );
