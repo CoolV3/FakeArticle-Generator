@@ -4,15 +4,6 @@ import CustomMarkdownInterpreter from "@/components/MarkdownInterpretor";
 export default function EmptyArticle({markdown, title, author, imageUrl}: {markdown: string, title: string, author: string, imageUrl: string}) {
 
 
-    const testMarkdown = `# Testmarkdown
-Will it work? This is a 
-test Will it work? This is a text Will it work? This is a text Will it work? This is a text Will it work? This is a text Will it work? This is a text
-
-
-### Small Headline
-
-- liste 1
-- liste 2`;
 
     return(
         <div className="text-black flex flex-col pt-5">
@@ -21,7 +12,7 @@ test Will it work? This is a text Will it work? This is a text Will it work? Thi
                 {imageUrl != "" && (
                     // only for testing
                     // eslint-disable-next-line @next/next/no-img-element
-                <img className="rounded-2xl " width={500} height={500} src={imageUrl} alt={"A Picture with lots of coins on a white Table."}/>
+                <img className="rounded-2xl " width={500} height={500} src={imageUrl} alt={"Article Head Image"}/>
                 )}
                 <p className="self-start pl-5 text-lg">By {author}</p>
             </div>
