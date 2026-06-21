@@ -13,7 +13,7 @@ export default function ArticlePath({Paths}: {Paths:string[] }) {
         return
     }
     const PathUppercase = Paths.map((path) => (
-        path.charAt(0).toUpperCase() + path.slice(1)
+        path.replace("-", " ").charAt(0).toUpperCase() + path.slice(1)
     ))
 
     return (

@@ -41,7 +41,7 @@ export default async function ArticlePage({params}: { params: Promise<{ articleI
     }
 
     return (
-        <div>
+        <div className="mx-auto w-full">
             <EmptyArticle
                 markdown={crapArticle.content}
                 title={crapArticle.title}

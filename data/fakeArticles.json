@@ -1,93 +1,47 @@
-
 [
   {
-    "title": "The Pocket Money Experiment Nobody Asked For",
-    "shortDescription": "A fake overview article about a tiny budgeting trend that somehow became very serious.",
-    "content": "# The Pocket Money Experiment Nobody Asked For\n\nA small group of students started tracking every coin they spent for one week. The result was not exactly scientific, but it was surprisingly useful.\n\n## What Happened\n\nMost people noticed that tiny purchases felt harmless in the moment. Snacks, small drinks, random apps, and little online extras added up faster than expected.\n\n## The Big Lesson\n\nThe article argues that pocket money is easier to control when it has simple categories: spending, saving, and fun. Nobody needs a complicated system to understand where money goes.\n\n## Final Thought\n\nThe experiment did not change the world, but it made budgeting feel less boring.",
-    "image": "https://cdn.pixabay.com/photo/2016/03/26/19/17/enclosed-1281148_1280.jpg",
-    "author": "Mila Hartmann",
-    "id": "pocket-money-experiment",
-    "category": "Finance"
+    "title": "How Ranked-Choice Voting is Reshaping Municipal Elections",
+    "shortDescription": "A look at the practical mechanics, structural advantages, and implementation challenges of alternative ballot systems in local governance.",
+    "content": "# How Ranked-Choice Voting is Reshaping Municipal Elections\n\nTraditional local elections are straightforward: voters select one candidate, and the person with the most votes wins. However, a growing number of municipalities are moving away from this winner-take-all approach. By allowing citizens to rank candidates in order of preference, local governments are fundamentally shifting how campaigns are run and how winners are decided.\n\n## The Mechanics of the Ranked Ballot\n\nUnder a ranked-choice voting framework, voters aren't forced to back a single frontrunner. Instead, they write down their ideal choices in sequence—first, second, third, and so on. If a candidate secures an absolute majority of first-preference votes right away, the election concludes.\n\nIf no single candidate passes the 50% threshold, the counting moves to an elimination phase. The candidate with the fewest top-tier votes is removed from the pool, and their supporters' votes are instantly redistributed to their second-choice candidates. This automated cycle repeats until a clear majority emerges.\n\n## Lowering Campaign Friction\n\nOne of the most notable secondary effects of this voting model is its impact on campaign tone. In a traditional race, political strategies often rely on attacking direct opponents to draw away their base. In a ranked-choice environment, candidates frequently need to secure the second-preference votes of their rivals' supporters.\n\nThis structural reality creates an incentive for more cooperative campaigns. Candidates are far less likely to alienate a voter base with aggressive rhetoric if they hope to win their backup votes later in the count.\n\n## Practical Hurdles to Implementation\n\nTransitioning to a ranked ballot isn't without its challenges. The most immediate obstacle is voter education. Tabulation software must be certified, polling staff need comprehensive retraining, and local election commissions have to distribute clear materials to ensure voters understand how to fill out their ballots correctly without making errors that void their choice.\n\nAdditionally, processing multi-tiered ballots can sometimes delay final election night tallies, requiring communities to wait a few extra days for verified outcomes.\n\n## Final Thought\n\nWhile adapting to ranked-choice voting requires a clear commitment of administrative resources, many cities find that the reward is an electorate that feels much more connected to the final municipal outcome.",
+    "image": "https://cdn.pixabay.com/photo/2015/05/15/01/48/computer-767776_1280.jpg",
+    "author": "Marcus Sterling",
+    "id": "ranked-choice-voting-impact",
+    "category": "politics"
   },
   {
-    "title": "Europe Discovers the Magic of Slow Trains Again",
-    "shortDescription": "A fictional article about students choosing cheaper and slower travel across Europe.",
-    "content": "# Europe Discovers the Magic of Slow Trains Again\n\nFast travel is convenient, but slow travel is becoming interesting again in this fake report about budget-friendly journeys.\n\n## Why It Matters\n\nStudents in the article choose trains because they can plan better, spend less, and actually see the places between big cities.\n\n## The Budget Angle\n\nInstead of buying expensive last-minute tickets, the article recommends planning early and comparing routes.\n\n## Final Thought\n\nThe slow train is not always the fastest option, but sometimes it creates the better story.",
-    "image": "https://cdn.pixabay.com/photo/2016/11/29/09/08/architecture-1868667_1280.jpg",
-    "author": "Jonas Keller",
-    "id": "europe-slow-trains",
-    "category": "Europe"
+    "title": "Electrifying the Wilderness: EV Charging Expands Across US National Parks",
+    "shortDescription": "How conservationists and infrastructure teams are bringing robust electric vehicle networks to remote natural habitats.",
+    "content": "# Electrifying the Wilderness: EV Charging Expands Across US National Parks\n\nAs electric vehicle adoption continues to rise across North America, drivers are taking their cars further away from major metropolitan centers. To accommodate this shift, infrastructure teams are working to install reliable EV charging stations within remote federal lands, striking a careful balance between modern convenience and environmental conservation.\n\n## Overcoming Remote Grid Limitations\n\nBringing high-voltage charging networks deep into protected wilderness areas presents significant engineering challenges. Many national park hubs rely on isolated, low-capacity utility grids designed exclusively for basic administrative offices and visitor facilities.\n\nTo solve this without overloading local resources, engineering teams are utilizing specialized stationary battery storage hubs. These units draw power slowly from the existing grid over low-demand periods, storing energy safely until an EV hooks up for a rapid charge.\n\n## Minimizing Visual and Ecological Impact\n\nPreserving the natural aesthetic of public parks is a central priority for these infrastructure upgrades. Charging stations are intentionally designed with muted, natural colors and tucked into existing asphalt parking areas rather than carving out new green space.\n\nEngineers are also using directional, low-emission LED lighting on the hardware to protect local dark sky initiatives and prevent disturbing nocturnal wildlife routines nearby.\n\n## Adapting to Multi-Day Travel Patterns\n\nUnlike highway charging hubs where drivers expect to charge inside fifteen minutes, national park visitors typically park their cars for several hours while hiking or exploring. Consequently, planners are prioritizing Level 2 chargers at trailheads and visitor lodges.\n\nThis setup allows vehicles to charge steadily over an extended period, reducing the strain on park electricity grids while matching the natural pace of park visitors.\n\n## Final Thought\n\nExpanding electric vehicle infrastructure across public lands ensures that our most pristine natural spaces remain entirely accessible to a new generation of sustainable travelers.",
+    "image": "https://cdn.pixabay.com/photo/2017/05/10/19/16/electric-charge-2301604_1280.jpg",
+    "author": "Sarah Jenkins",
+    "id": "national-parks-ev-charging",
+    "category": "america"
   },
   {
-    "title": "A Tiny App Claims It Can Fix Homework Chaos",
-    "shortDescription": "A fake tech article about an app that organizes tasks before everything becomes stressful.",
-    "content": "# A Tiny App Claims It Can Fix Homework Chaos\n\nA fictional startup has created a small planning app for students who forget deadlines until the last possible moment.\n\n## The Idea\n\nThe app divides homework into three zones: today, this week, and panic mode. The design is simple because the creators believe students do not need another complicated dashboard.\n\n## Why People Like It\n\nThe article says the app works because it avoids guilt and focuses on the next small step.\n\n## Final Thought\n\nThe app may not make homework fun, but it might make homework less messy.",
-    "image": "https://cdn.pixabay.com/photo/2015/01/08/18/26/write-593333_1280.jpg",
-    "author": "Nora Stein",
-    "id": "homework-chaos-app",
-    "category": "Tech"
+    "title": "The High-Rise Farms Cultivating Crops in Arid Desert Cities",
+    "shortDescription": "How controlled-environment agriculture is allowing water-scarce metropolitan areas to grow fresh produce locally.",
+    "content": "# The High-Rise Farms Cultivating Crops in Arid Desert Cities\n\nIn regions defined by extreme temperatures and limited arable soil, importing fresh food has long been a costly necessity. Today, innovative agricultural developments are turning this dynamic around. Desert cities are increasingly building indoor vertical farms that grow fresh produce year-round directly inside urban centers.\n\n## Optimizing Resources in Controlled Environments\n\nTraditional farming requires expansive fields and significant amounts of water, much of which is lost to evaporation in hot climates. Vertical indoor facilities completely bypass this issue by shifting production to highly managed indoor towers.\n\nUsing advanced hydroponic and aeroponic setups, these high-tech farms deliver water and nutrients directly to plant roots. Closed-loop recycling systems capture and filter runoff, allowing vertical farms to use up to 95% less water than traditional open-air farms.\n\n## Insulating Crops from Harsh Climates\n\nBy moving cultivation indoors, crops are shielded from unpredictable weather, searing desert heat waves, and destructive sandstorms. Custom-tailored LED light arrays replicate the ideal solar spectrum for every phase of plant development, ensuring optimal growth regardless of external conditions.\n\nThis predictable indoor environment enables continuous harvesting schedules, providing local grocery networks with a steady, reliable supply of fresh greens every week of the year.\n\n## Streamlining Urban Logistics\n\nBuilding vertical farms right inside city borders slashes the distance food needs to travel before it hits the table. Eliminating long-distance shipping routes lowers transportation emissions and guarantees that consumers receive fresher produce with a significantly longer shelf life.\n\n## Final Thought\n\nWhile vertical farming won't replace traditional grain production anytime soon, it offers a highly effective, resilient strategy for producing fresh vegetables in water-scarce environments.",
+    "image": "https://cdn.pixabay.com/photo/2025/11/06/02/13/agriculture-9939844_1280.jpg",
+    "author": "Amara Diallo",
+    "id": "desert-vertical-farming",
+    "category": "world"
   },
   {
-    "title": "America Tries a New School Lunch Budget Challenge",
-    "shortDescription": "A fictional article about students comparing affordable lunch ideas.",
-    "content": "# America Tries a New School Lunch Budget Challenge\n\nIn this fake article, students test how much a healthy lunch can cost when planned carefully.\n\n## The Challenge\n\nEach student gets a small weekly budget and has to prepare simple lunches without wasting food.\n\n## What They Learned\n\nPlanning ahead made the biggest difference. Buying random food every day was usually more expensive than preparing basic meals at home.\n\n## Final Thought\n\nThe lunch challenge became less about food and more about smart daily decisions.",
-    "image": "https://cdn.pixabay.com/photo/2017/08/06/11/45/people-2591874_1280.jpg",
-    "author": "Leo Morgan",
-    "id": "school-lunch-budget-challenge",
-    "category": "America"
+    "title": "The Blueprint for Europe’s Next-Generation Digital Identity Wallet",
+    "shortDescription": "An analysis of the cross-border framework aimed at giving EU citizens secure control over digital credentials.",
+    "content": "# The Blueprint for Europe’s Next-Generation Digital Identity Wallet\n\nThe European Union is advancing toward a unified framework designed to change how citizens interact with public and private digital services. The upcoming digital identity architecture aims to provide a secure mobile platform where users can store verified credentials, from driver's licenses to academic diplomas, with a strong focus on data privacy.\n\n## Simplifying Cross-Border Authentication\n\nCurrently, navigating digital public services across European borders requires managing a variety of separate local verification systems. A traveler or remote worker looking to rent property or secure a business license in another member state often faces administrative roadblocks.\n\nThe new wallet framework is engineered to resolve this friction by establishing a universally accepted digital standard, allowing individuals to confirm their identity smoothly at any official portal across the entire bloc.\n\n## The Architecture of Selective Disclosure\n\nAt the core of this initiative is a privacy concept known as selective disclosure. Traditional identity documents often reveal more information than necessary; for instance, showing a physical driver's license to prove legal age also exposes your full name, home address, and exact date of birth.\n\nThe digital wallet resolves this by using cryptographically signed tokens. When confirming age, the wallet generates a simple \"yes or no\" confirmation code, verifying that the user meets the necessary requirement without sharing any unrelated personal information.\n\n## Securing the Core Decentralized Network\n\nTo ensure user trust, the digital wallet operates on a decentralized framework, meaning personal data remains stored directly on the user's personal device rather than being compiled into a massive central government database. This localized storage model significantly minimizes the risk of large-scale data breaches.\n\n## Final Thought\n\nBy prioritizing user privacy and cross-border compatibility, Europe is establishing a robust, modern framework for secure digital identity management.",
+    "image": "https://cdn.pixabay.com/photo/2020/03/28/13/26/wallet-4977021_1280.jpg",
+    "author": "Lukas Novak",
+    "id": "europe-digital-identity",
+    "category": "europe"
   },
   {
-    "title": "The Robot That Only Gives Boring Money Advice",
-    "shortDescription": "A fake tech-finance article about an AI assistant that recommends simple saving habits.",
-    "content": "# The Robot That Only Gives Boring Money Advice\n\nA fictional finance robot has become popular because it refuses to give dramatic advice.\n\n## The Robot's Rules\n\nThe robot tells users to save a little, avoid buying useless things, and write down what they spend.\n\n## Why It Works\n\nThe advice is boring, but that is the point. The article argues that useful money habits are often simple and repetitive.\n\n## Final Thought\n\nSometimes the best financial advice sounds unimpressive because it actually makes sense.",
-    "image": "https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_1280.jpg",
-    "author": "Ella Novak",
-    "id": "boring-money-robot",
-    "category": "Tech"
-  },
-  {
-    "title": "World Cities Compete to Build the Smallest Park",
-    "shortDescription": "A fictional world article about tiny green spaces appearing in crowded places.",
-    "content": "# World Cities Compete to Build the Smallest Park\n\nThis fake report follows cities that are turning empty corners into tiny parks.\n\n## The Concept\n\nInstead of waiting for huge construction projects, city planners in the article use small areas between buildings, roads, and sidewalks.\n\n## Why People Notice\n\nEven a few plants and benches can make a street feel more friendly.\n\n## Final Thought\n\nA tiny park will not solve every urban problem, but it can make a boring corner feel alive.",
-    "image": "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg",
-    "author": "Amir Vogel",
-    "id": "world-smallest-park",
-    "category": "World"
-  },
-  {
-    "title": "A New Pocket Money Rule Becomes Weirdly Popular",
-    "shortDescription": "A fake finance article about splitting money before spending it.",
-    "content": "# A New Pocket Money Rule Becomes Weirdly Popular\n\nA simple rule is spreading in this fictional article: split pocket money before spending anything.\n\n## The Rule\n\nHalf goes to flexible spending, one quarter goes to saving, and one quarter goes to a future goal.\n\n## Why It Helps\n\nThe article explains that decisions feel easier when the money already has a purpose.\n\n## Final Thought\n\nThe rule is not perfect, but it gives people a starting point instead of a blank wallet.",
-    "image": "https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696228_1280.jpg",
-    "author": "Sofia Brandt",
-    "id": "popular-pocket-money-rule",
-    "category": "Finance"
-  },
-  {
-    "title": "Europe Tests a Digital Museum Pass for Students",
-    "shortDescription": "A fictional Europe article about cheaper access to museums through one digital card.",
-    "content": "# Europe Tests a Digital Museum Pass for Students\n\nA fake student museum pass is being tested in several cities in this fictional article.\n\n## The Idea\n\nStudents use one digital pass to visit museums, exhibitions, and cultural events at a lower price.\n\n## Why It Could Work\n\nThe article says the pass makes culture easier to access because students do not need to search for separate discounts every time.\n\n## Final Thought\n\nThe pass is fictional, but the idea is simple: make learning outside school easier.",
-    "image": "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg",
-    "author": "Felix Wagner",
-    "id": "europe-digital-museum-pass",
-    "category": "Europe"
-  },
-  {
-    "title": "The Great Debate Over One More Streaming Subscription",
-    "shortDescription": "A fake article about whether small monthly payments are still small after a year.",
-    "content": "# The Great Debate Over One More Streaming Subscription\n\nThis fictional article looks at the classic question: is one more subscription really a problem?\n\n## The Calculation\n\nA small monthly price can feel harmless. But when the article calculates the yearly cost, the number suddenly looks much bigger.\n\n## The Advice\n\nThe article recommends checking subscriptions once a month and canceling anything that is barely used.\n\n## Final Thought\n\nA subscription is only cheap if it is actually worth using.",
-    "image": "https://cdn.pixabay.com/photo/2016/11/29/12/54/computer-1869236_1280.jpg",
-    "author": "Clara Weiss",
-    "id": "streaming-subscription-debate",
-    "category": "Tech"
-  },
-  {
-    "title": "World Report: Everyone Wants a Cleaner Desk",
-    "shortDescription": "A fictional lifestyle-world article about how better organization can reduce daily stress.",
-    "content": "# World Report: Everyone Wants a Cleaner Desk\n\nThis fake report claims that students everywhere are trying to make their desks less chaotic.\n\n## The Problem\n\nBooks, chargers, notes, snacks, and random cables create a workspace that makes every task feel bigger than it is.\n\n## The Simple Fix\n\nThe article suggests removing everything that is not needed for the next task. A clean desk does not need to be perfect; it just needs to be usable.\n\n## Final Thought\n\nA better desk will not do the work for anyone, but it can make starting easier.",
-    "image": "https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_1280.jpg",
-    "author": "Ben Adler",
-    "id": "world-cleaner-desk",
-    "category": "World"
+    "title": "Why the Tech Industry is Moving Beyond the Password",
+    "shortDescription": "Understanding the cryptographic shift toward passkeys and device-level authentication patterns.",
+    "content": "# Why the Tech Industry is Moving Beyond the Password\n\nFor decades, alphanumeric strings have served as the standard gateway to our personal online data. However, as cyber threats become increasingly sophisticated, traditional passwords are major vulnerabilities. To fix this, tech platforms are transitioning to a far more secure alternative: device-based passkeys.\n\n## The Flaws of Traditional Credentials\n\nMost modern digital security challenges stem from standard human behavior. Because memorizing dozens of complex, distinct passwords is incredibly difficult, many users resort to reusing similar variations across multiple sites.\n\nThis pattern creates an opening for malicious actors; if a single minor forum suffers a data breach, credentials can quickly be tested against major banking or email platforms using automated tools, bypassing basic security measures.\n\n## How Passkeys Utilize Cryptography\n\nPasskeys replace simple typed text strings with robust public-key cryptography. When you set up an online account, a unique pair of cryptographic keys is generated. The website stores the public key, while the corresponding private key is held securely on your physical device.\n\nTo log in, your device solves a quick cryptographic puzzle sent by the website. This process is unlocked using your local biometric data, such as a fingerprint scan or facial recognition, ensuring authentication is both fast and incredibly secure.\n\n## Eliminating Phishing Threats\n\nBecause passkeys are bound to specific, verified domains by your device's operating system, they offer built-in protection against phishing attacks. Even if a user is tricked into visiting a fraudulent website that looks identical to their bank's portal, the device will recognize the domain mismatch and refuse to authenticate the request.\n\n## Final Thought\n\nMoving away from passwords does more than just simplify our daily logins; it eliminates some of the most widespread security vulnerabilities on the internet.",
+    "image": "https://cdn.pixabay.com/photo/2014/02/13/07/28/security-265130_1280.jpg",
+    "author": "Elena Vance",
+    "id": "passkeys-tech-evolution",
+    "category": "tech"
   }
 ]
