@@ -1,11 +1,10 @@
-"use client"
-
-
 import Image from "next/image";
 import Link from "next/link";
+import getCrapArticles from "@/app/actions/getCrapArticles";
 
-export default function GuidesOverview() {
+export default async function GuidesOverview() {
 
+    const articles = await getCrapArticles({howMany: 4})
 
     return(
         <div className="flex-col flex ">
@@ -13,17 +12,19 @@ export default function GuidesOverview() {
                 <h1 className="text-black text-4xl">Guides</h1>
                 <p className="text-black">Carefully crafted guides to help you get things done</p>
             </div>
-            <div>
-                <div className="p-10 flex text-black gap-5">
-                   <Image className="rounded-2xl " width={200} height={100} src={"/CoinsPicture.jpg"} alt={"A Picture with lots of coins on a white Table."}/>
-                    <div className="flex flex-col gap-5 justify-between">
-                        <div className="flex flex-col gap-5">
-                            <h1 className="text-4xl">Pocketmoney Guide for Kids</h1>
-                            <p className="text-black">A guide that helps you pick the right amount of pocket money for your Kids</p>
+            <div className="flex flex-col gap-10 w-full w-max-200 px-10 py-10">
+                {articles.map((article, index ) => (
+                    <div key={index} className="flex justify-start items-stretch gap-10 flex-col md:flex-row">
+                        <Image alt="Article Title Picture" className="rounded-2xl object-cover" width={400} height={500} src={article.image}/>
+                        <div className="flex flex-col justify-between self-stretch">
+                            <div>
+                                <h1 className="font-bold text-4xl">{article.title}</h1>
+                                <p>{article.shortDescription}</p>
+                            </div>
+                            <Link href={`/article/${article.id}`} className="max-w-100 mt-auto bg-yellow-400 rounded-2xl p-5 text-2xl cursor-pointer hover:bg-yellow-300 transition-colors flex justify-center">Read more</Link>
                         </div>
-                        <Link href={"/article/pocketmoney"} className="bg-yellow-400 rounded-2xl p-5 text-2xl cursor-pointer hover:bg-yellow-300 transition-colors flex justify-center">Read more</Link>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     )

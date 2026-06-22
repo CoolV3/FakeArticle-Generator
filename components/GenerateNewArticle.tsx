@@ -128,7 +128,7 @@ export default function GenerateNewArticleComponent() {
                                     <h1 className="text-lg">You have permission to use the images in the article including the header image</h1>
                                 </div>
                                 <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
-                                    <h1 className="text-lg">The article may not contain any illegal content or copyrighted content</h1>
+                                    <h1 className="text-lg">The article may not contain any illegal content, misleading or copyrighted content</h1>
                                 </div>
                                 <div className="bg-blue-400 p-6 rounded-2xl flex items-start justify-start">
                                     <h1 className="text-lg">You have read and accepted out <Link className="text-blue-900" href={"/privacy"}>Privacy Policy</Link></h1>
