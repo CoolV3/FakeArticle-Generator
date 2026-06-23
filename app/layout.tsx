@@ -39,7 +39,7 @@ export default function RootLayout({
         </div>
         <ArticlePath Paths={Path}/>
       </div>
-      <main className="flex flex-col min-h-0 grow">
+      <main className="flex flex-col min-h-0 grow text-black">
       {children}
       </main>
       <div className="z-100 shrink-0">

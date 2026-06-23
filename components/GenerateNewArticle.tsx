@@ -30,7 +30,7 @@ export default function GenerateNewArticleComponent() {
     const [image, setImage] = useState("")
     const [error, setError] = useState("")
     const [showPublishWarning, setShowPublishWarning] = useState(false)
-    const [showSuccess, setShowSuccess] = useState(false)
+    const [showSuccess, setShowSuccess] = useState(true)
     const [articleId, setArticleId] = useState<number>(1222)
 
 
@@ -93,20 +93,20 @@ export default function GenerateNewArticleComponent() {
                         <div className="p-10 flex-col flex gap-5">
                             <div>
                                 <p>Article Name</p>
-                                <input placeholder="Article Name" className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setTitle(e.target.value)}/>
+                                <input placeholder="Article Name" className="border-2 rounded-2xl p-4 text-lg w-full" onChange={(e) => setTitle(e.target.value)}/>
                             </div>
                             <MarkdownInput onChange={(e) => setMarkdownArticle(e)}/>
                             <div>
                                 <p>Author Name</p>
-                                <input type="text" placeholder="Max Mustermann" className="border-2 rounded-2xl p-4 text-lg w-100 " onChange={(e) => setAuthor(e.target.value)}/>
+                                <input type="text" placeholder="Max Mustermann" className="border-2 rounded-2xl p-4 text-lg w-full " onChange={(e) => setAuthor(e.target.value)}/>
                             </div>
                             <div>
                                 <p>Title Image url</p>
-                                <input type="url" placeholder="https://..." className="border-2 rounded-2xl p-4 text-lg w-100" onChange={(e) => setImage(e.target.value)}/>
+                                <input type="url" placeholder="https://..." className="border-2 rounded-2xl p-4 text-lg w-full" onChange={(e) => setImage(e.target.value)}/>
                             </div>
                         </div>
                     </div>
-                    <div className="h-screen overflow-y-auto justify-start ">
+                    <div className="h-screen overflow-y-auto justify-start">
                         <EmptyArticle markdown={MarkdownArticle} title={title} author={author} imageUrl={image}/>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ export default function GenerateNewArticleComponent() {
 
             {showPublishWarning && (
                 <div className="fixed inset-0 z-110 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={(e) => setShowPublishWarning(false)}>
-                    <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-100 h-220 bg-blue-100 pt-5" onClick={(e) => e.stopPropagation()}>
+                    <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-full h-220 bg-blue-100 pt-5 px-10" onClick={(e) => e.stopPropagation()}>
                         <div className="flex items-center justify-center flex-col">
                             <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25">
                                 <TriangleAlert className="text-red-600 w-20 h-20"/>
@@ -149,7 +149,7 @@ export default function GenerateNewArticleComponent() {
             )}
             {showSuccess && (
             <div className="fixed inset-0 z-110 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={() => setShowSuccess(false)}>
-                <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-120 h-auto bg-blue-100 p-5" onClick={(e) => e.stopPropagation()}>
+                <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-full h-auto bg-blue-100 p-5" onClick={(e) => e.stopPropagation()}>
                     <div className="flex items-center justify-center flex-col gap-5 p-2">
                         <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25 ">
                             <p className="w-20 h-20 text-center text-5xl flex justify-center items-center">🎉</p>
