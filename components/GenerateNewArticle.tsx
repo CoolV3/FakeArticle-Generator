@@ -4,7 +4,7 @@ import EmptyArticle from "@/components/Article";
 import {useState} from "react";
 import MarkdownInput from "@/components/MarkdownInput";
 import publishArticleAction from "@/app/actions/publishArticleAction";
-import { TriangleAlert } from 'lucide-react';
+import { TriangleAlert, Share } from 'lucide-react';
 import Link from "next/link";
 
 type PublishedArticle = {
@@ -30,6 +30,8 @@ export default function GenerateNewArticleComponent() {
     const [image, setImage] = useState("")
     const [error, setError] = useState("")
     const [showPublishWarning, setShowPublishWarning] = useState(false)
+    const [showSuccess, setShowSuccess] = useState(true)
+    const [articleId, setArticleId] = useState<number>(1222)
 
 
     const publishArticle = async () => {
@@ -67,16 +69,20 @@ export default function GenerateNewArticleComponent() {
         const response = await publishArticleAction(article)
 
         if (response.success) {
-            return (
-                <div>
-                    <h1>hh</h1>
-                </div>
-            )
+            setShowPublishWarning(false)
+            setShowSuccess(true)
+            setArticleId(response.articleId as number)
         } else (
             setError(response.message)
         )
     }
 
+    const openShareWindow = async () => {
+        await navigator.share({
+            url: `/article/${articleId}`
+        });
+
+    }
     return(
         <div className="flex items-center justify-center">
             <div className="flex flex-col justify-center items-center pb-10 relative">
@@ -140,6 +146,28 @@ export default function GenerateNewArticleComponent() {
                         </div>
                     </div>
                 </div>
+            )}
+            {showSuccess && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={() => setShowSuccess(false)}>
+                <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-120 h-auto bg-blue-100 p-5" onClick={(e) => e.stopPropagation()}>
+                    <div className="flex items-center justify-center flex-col gap-5 p-2">
+                        <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25 ">
+                            <p className="w-20 h-20 text-center text-5xl flex justify-center items-center">🎉</p>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <h1 className="text-6xl">Success</h1>
+                            <p>Your article is now live for three days.</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <p className="text-lg">Shareable Url</p>
+                            <div className="flex gap-2">
+                                <Link href={`https://news.cmd-servers.de/article/${articleId}`} target="_blank" className="text-lg bg-gray-300 p-2 px-10 rounded-2xl hover:text-blue-500 cursor-pointer">https://news.cmd-servers.de/article/{articleId}</Link>
+                                <Share className="w-10 h-10 cursor-pointer hover:scale-110 transition-all " onClick={(e) => openShareWindow()}> Open share window</Share>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             )}
         </div>
 
