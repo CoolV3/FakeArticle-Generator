@@ -6,27 +6,27 @@ export default function FooterComponent() {
     const FooterLinks = [
         {
          name: "News" ,
-         href: "/fsafd"
+         href: "/"
         },
         {
             name: "Politics" ,
-            href: "/fsafd"
+            href: "/"
         },
         {
             name: "World" ,
-            href: "/fsafd"
+            href: "/"
         },
         {
             name: "America" ,
-            href: "/fsafd"
+            href: "/"
         },
         {
             name: "Europe" ,
-            href: "/fsafd"
+            href: "/"
         },
         {
             name: "Tech" ,
-            href: "/fsafd"
+            href: "/"
         }
     ]
 

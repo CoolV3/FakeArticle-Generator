@@ -84,10 +84,10 @@ export default function GenerateNewArticleComponent() {
 
     }
     return(
-        <div className="flex items-center justify-center">
+        <div className="w-full flex items-center justify-center px-4 pt-5">
             <div className="flex flex-col justify-center items-center pb-10 relative">
                 <div className="flex flex-col md:flex-row md:gap-20 justify-center items-start">
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col justify-center items-center md:border-r-2 md:pr-10">
                         <h1 className="text-5xl">Generate an new Article</h1>
                         <p>Generate an real looking news article.</p>
                         <div className="p-10 flex-col flex gap-5">

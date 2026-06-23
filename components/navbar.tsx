@@ -12,23 +12,23 @@ export default function NavbarComponent() {
     const Links = [
         {
             name: "Latest News",
-            href: "/guide/3"
+            href: "/#latest"
         },
         {
             name: "Politics",
-            href: "/guide/1"
+            href: "/#politics"
         },
         {
             name: "Tech",
-            href: "/guide/1"
+            href: "/#tech"
         },
         {
             name: "World",
-            href: "/guide/1"
+            href: "/#world"
         },
         {
             name: "Europe",
-            href: "/guide/1"
+            href: "/#europe"
         }
     ]
 
