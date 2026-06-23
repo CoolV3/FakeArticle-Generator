@@ -34,8 +34,8 @@ export default function NavbarComponent() {
 
 
     return (
-            <div className="w-full bg-white ">
-                <div className="w-full h-20 bg-white flex items-center p-5 justify-between border-b-2">
+            <div className="w-full bg-white z-100">
+                <div className="w-full h-20 bg-white flex items-center p-5 justify-between border-b-2 ">
                     <Link className="text-black text-3xl font-bold cursor-pointer hover:text-yellow-500 transition-colors" href="/">PlacNews</Link>
                     <div className="flex gap-6">
                         <Search className="w-8 h-8 text-black cursor-pointer group hover:text-yellow-500 transition-all" onClick={() => setSearchOpen(!searchOpen)}/>
@@ -44,7 +44,7 @@ export default function NavbarComponent() {
 
                 </div>
 
-                <div className={`fixed right-0 pt-2 flex pr-2 items-center transition-all ease-in-out duration-500 ${searchOpen ? "opacity-100 translate-y-0 pointer-events-auto w-auto" : "pointer-events-none opacity-0 -translate-y-2"}`} >
+                <div className={`bg-white rounded-2xl fixed right-0 pt-2 flex pr-2 items-center transition-all ease-in-out duration-500 ${searchOpen ? "opacity-100 translate-y-0 pointer-events-auto w-auto" : "pointer-events-none opacity-0 -translate-y-2"}`} >
                     <input className="border-2 rounded-2xl p-2" placeholder="Search for an Article"/>
                     <Link href="/search">
                         <Search className="w-8 h-8 cursor-pointer hover:text-yellow-500 transition-all"/>

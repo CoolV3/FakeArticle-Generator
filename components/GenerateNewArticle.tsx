@@ -30,7 +30,7 @@ export default function GenerateNewArticleComponent() {
     const [image, setImage] = useState("")
     const [error, setError] = useState("")
     const [showPublishWarning, setShowPublishWarning] = useState(false)
-    const [showSuccess, setShowSuccess] = useState(true)
+    const [showSuccess, setShowSuccess] = useState(false)
     const [articleId, setArticleId] = useState<number>(1222)
 
 
@@ -119,7 +119,7 @@ export default function GenerateNewArticleComponent() {
             </div>
 
             {showPublishWarning && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={(e) => setShowPublishWarning(false)}>
+                <div className="fixed inset-0 z-110 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={(e) => setShowPublishWarning(false)}>
                     <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-100 h-220 bg-blue-100 pt-5" onClick={(e) => e.stopPropagation()}>
                         <div className="flex items-center justify-center flex-col">
                             <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25">
@@ -148,7 +148,7 @@ export default function GenerateNewArticleComponent() {
                 </div>
             )}
             {showSuccess && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={() => setShowSuccess(false)}>
+            <div className="fixed inset-0 z-110 flex items-center justify-center bg-black/40 backdrop-blur-sm " onClick={() => setShowSuccess(false)}>
                 <div className="absolute flex items-center justify-between flex-col rounded-2xl border-2 w-120 h-auto bg-blue-100 p-5" onClick={(e) => e.stopPropagation()}>
                     <div className="flex items-center justify-center flex-col gap-5 p-2">
                         <div className="rounded-full items-center justify-center flex bg-blue-400 p-6 w-25 h-25 ">

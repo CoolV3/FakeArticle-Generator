@@ -2,6 +2,7 @@ import prisma from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import EmptyArticle from "@/components/Article";
 import getCrapArticleById  from "@/app/actions/getCrapArticles";
+import ArticleNotFoundComponent from "@/components/ArticleNotFound";
 
 
 
@@ -19,7 +20,7 @@ export default async function ArticlePage({params}: { params: Promise<{ articleI
         });
 
         if (!currentArticle) {
-            notFound();
+            return <ArticleNotFoundComponent/>
         }
 
         return (
@@ -37,7 +38,7 @@ export default async function ArticlePage({params}: { params: Promise<{ articleI
     const crapArticle =  articleArray[0]
 
     if (!crapArticle) {
-        notFound();
+        return <ArticleNotFoundComponent/>
     }
 
     return (

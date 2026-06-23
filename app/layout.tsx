@@ -34,14 +34,17 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white">
       <div className="justify-center gap-5 w-full flex flex-col ">
-        <NavbarComponent/>
+        <div className="z-100 shrink-0">
+          <NavbarComponent/>
+        </div>
         <ArticlePath Paths={Path}/>
       </div>
-      <div className="grow">
+      <main className="flex flex-col min-h-0 grow">
       {children}
-      </div>
-
+      </main>
+      <div className="z-100 shrink-0">
         <FooterComponent/>
+      </div>
 
       </body>
     </html>

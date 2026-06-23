@@ -8,9 +8,9 @@ export default async function GuidesOverview() {
 
     return(
         <div className="flex-col flex ">
-            <div className="bg-yellow-100 w-full h-auto flex items-center justify-center p-4 flex-col gap-4">
-                <h1 className="text-black text-4xl">Guides</h1>
-                <p className="text-black">Carefully crafted guides to help you get things done</p>
+            <div className=" w-full h-auto flex items-center justify-center p-4 flex-col gap-4 border-b-2">
+                <h1 className="text-black text-4xl">Articles</h1>
+                <p className="text-black">Carefully crafted articles.</p>
             </div>
             <div className="flex flex-col gap-10 w-full w-max-200 px-10 py-10">
                 {articles.map((article, index ) => (
