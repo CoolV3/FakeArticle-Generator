@@ -50,7 +50,7 @@ export default function GenerateNewArticleComponent() {
             setError("Author name is too long")
             return
         }
-        if (MarkdownArticle.length > 2000) {
+        if (MarkdownArticle.length > 4500) {
             setError("Article is too long.")
             return
         }

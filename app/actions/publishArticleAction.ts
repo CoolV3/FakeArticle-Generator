@@ -45,7 +45,7 @@ export default async function publishArticleAction(input: PublishedArticle) {
     if (author.length > 50) {
         return {success: false, message: "Author name is too long"}
     }
-    if (markdown.length > 2000) {
+    if (markdown.length > 4500) {
         return {success: false, message: "Article is too long."}
     }
     if (!checkValidUrl(image)) {
@@ -81,14 +81,10 @@ export default async function publishArticleAction(input: PublishedArticle) {
     });
 
     if (articlesCreatedToday >= DAILY_ARTICLE_LIMIT) {
-        return {
-            success: false,
-            message: "Daily article limit reached.",
-        };
+        return {success: false, message: "Daily article limit reached.",};
     }
 
     const deletesAtDate = new Date(timeNow + 3 * 24 * 60 * 60 * 1000)
-    console.log("Got till here ")
     const newArticle = await prisma.article.create({
         data: {
             title,
@@ -100,9 +96,5 @@ export default async function publishArticleAction(input: PublishedArticle) {
         },
     });
 
-    return {
-        success: true,
-        message: "Article published successfully.",
-        articleId: newArticle.id
-    };
+    return {success: true, message: "Article published successfully.", articleId: newArticle.id};
 }
