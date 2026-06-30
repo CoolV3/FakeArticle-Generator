@@ -30,7 +30,7 @@ export default function GenerateNewArticleComponent() {
     const [image, setImage] = useState("")
     const [error, setError] = useState("")
     const [showPublishWarning, setShowPublishWarning] = useState(false)
-    const [showSuccess, setShowSuccess] = useState(true)
+    const [showSuccess, setShowSuccess] = useState(false)
     const [articleId, setArticleId] = useState<number>(1222)
 
 
